@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <a href="https://www.flaticon.com/free-icons/correct" title="correct icons">Correct icons created by Octopocto - Flaticon</a> -->
+  <!-- JavaScript Bundle with Popper -->
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/main1.css">
+
+  <title>Computer Component Ordering Form</title>
+</head>
+
+<body class="silver">
+  <div class="container">
+
+    <h3 class="mb-3 text-center">Computer Component Ordering Form</h3><!-- heading -->
+
+    <hr class="my-4"><!-- Divider -->
+
+    <form class="needs-validation" novalidate>
+
+      <div class="row g-3">
+        <div class="col-sm-6">
+          <!-- First Name -->
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="" required>
+          <div class="invalid-feedback">
+            Valid First Name is required.
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <!-- Last Name -->
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" placeholder="" required>
+          <div class="invalid-feedback">
+            Valid Last Name is required.
+          </div>
+        </div>
+
+        <div class="col-12">
+          <!-- Email ID -->
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="" required>
+          <div class="invalid-feedback">
+            Your Email ID is required.
+          </div>
+
+        </div>
+
+        <div class="col-12">
+          <!-- employee ID -->
+          <label for="empid" class="form-label">Employee ID</label>
+          <input type="text" class="form-control" id="empid" placeholder="" required>
+          <div class="invalid-feedback">
+            Please enter a valid Employee ID.
+          </div>
+        </div>
+
+        <div class="col-md-5">
+          <!-- dropdown list of user department -->
+          <label for="Department" class="form-label">Department</label>
+          <select class="form-select" id="dept" required>
+            <option value="">Choose...</option>
+            <option>IT Support</option>
+            <option>Finance & Accounting</option>
+            <option>HR</option>
+            <option>Operations</option>
+            <option>Sales and Marketing</option>
+            <option>Purchase</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select a valid department.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!-- Dropdown menu of user location -->
+          <label for="location" class="form-label">Location</label>
+          <select class="form-select" id="loc" required>
+            <option value="">Choose...</option>
+            <option>Mumbai</option>
+            <option>Bangalore</option>
+            <option>Bad Honnef</option>
+            <option>Berlin</option>
+          </select>
+          <div class="invalid-feedback">
+            Please provide a valid office location.
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!-- Dropdown menu of computer components -->
+          <label for="location" class="form-label">Required Computer Component</label>
+          <select class="form-select" id="comp" required>
+            <option value="">Choose...</option>
+            <option>HDD</option>
+            <option>SSD</option>
+            <option>Monitor</option>
+            <option>RAM</option>
+            <option>Power Cable</option>
+            <option>USB Pendrive</option>
+          </select>
+          <div class="invalid-feedback">
+            Please select required component.
+          </div>
+        </div>
+
+      </div>
+
+
+      <hr class="my-4"> <!-- Divider -->
+
+      <div class="container">
+        <!-- Button to submit information-->
+        <button class="w-100 btn btn-primary btn-lg" type="submit" onclick="openPopup()">Submit</button>
+        <div class="popup" id="popup">
+          <!-- Popup indicating that the request has been logged successfully Check mark imaage has been downloaded from flaticons-->
+          <img src="img/check.png" alt="Check Mark indicating that request has been logged successfully">
+          <h2>Thank you!</h2>
+          <p>Your request has been received successfully!</p>
+          <button type="button" onclick="closePopup()">OK</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="script/main.js"></script>
+
+</body>
+
+</html>
